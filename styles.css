@@ -1769,7 +1769,7 @@ header {
 }
 
 .glow_symbole>span {
-    filter: blur(120px);
+    filter: blur(160px);
 }
 
 .glow_symbole>span:first-child {
