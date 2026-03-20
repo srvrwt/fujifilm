@@ -5,7 +5,6 @@
     --secondary-color: #f9f9f9;
     --text-color: var(--black)111;
     --text-muted: #888888;
-    --bg-color: #ffffff;
     --accent-color: #f28b32;
     --nav-color: #1a1a1a;
     --font-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -55,7 +54,7 @@ p {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: #010101;
     color: var(--text-color);
     font-size: var(--font-size-base);
     overflow-x: hidden;
@@ -339,12 +338,18 @@ header {
 .new-launches-section {
     background-color: #010101;
     color: #fff;
-    padding: 200px 20px;
+    padding: 160px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+section {
     position: relative;
+    background: #ffffff;
 }
 
 .new-launch-header {
@@ -383,7 +388,7 @@ header {
 
 .main-camera-img {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
@@ -543,6 +548,8 @@ header {
     position: relative;
     overflow: hidden;
     border: 1px solid;
+    position: relative;
+    z-index: 3;
 
 }
 
@@ -1882,6 +1889,24 @@ header {
     display: none;
 }
 
+.new-launches-section.header_sec {
+    padding-bottom: 0;
+}
+
+.new-launches-section.camera {
+    padding-top: 0;
+    background: none;
+}
+
+section.new-launches-section.camera:after {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #010101;
+    content: "";
+}
 
 @media (max-width: 1200px) {
     .category-cards {
